@@ -198,8 +198,9 @@
                                 @endphp
                                 <img src="{{ $photo[0] }}" alt="{{ $photo[0] }}">
                                 <div class="content">
-                                    <p>{{ $data->cat_info['title'] }}</p>
-                                    <h3>{{ $data->title }} <br>Up to<span> {{ $data->discount }}%</span></h3>
+                                    <p>{{ $data->cat_info['title'] ?? 'Category' }}</p>
+                                    <h3>{{ $data->title ?? 'Category' }} <br>Up to<span>
+                                            {{ $data->discount ?? 'Category' }}%</span></h3>
                                     <a href="{{ route('product-detail', $data->slug) }}">Shop Now</a>
                                 </div>
                             </div>
@@ -616,7 +617,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script>
         /*==================================================================
-            [ Isotope ]*/
+                    [ Isotope ]*/
         var $topeContainer = $('.isotope-grid');
         var $filter = $('.filter-tope-group');
 
