@@ -1,5 +1,5 @@
 @extends('frontend.layouts.master')
-@section('title', 'Bajaj Point || 3S Dealer')
+@section('title', 'Bajaj Point || 3S Dealer of Uttara Motors Ltd')
 @section('main-content')
     <!-- Slider Area -->
     @if (count($banners) > 0)
@@ -617,7 +617,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script>
         /*==================================================================
-                    [ Isotope ]*/
+                        [ Isotope ]*/
         var $topeContainer = $('.isotope-grid');
         var $filter = $('.filter-tope-group');
 
