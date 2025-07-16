@@ -210,4 +210,18 @@ if (!function_exists('generateUniqueSlug')) {
     }
 }
 
+function highlight_bangla($text)
+{
+    // return preg_replace('/([\x{0980}-\x{09FF}]+)/u', '<span class="bangla-kalpurush">$1</span>', $text);
+    return preg_replace_callback('/([\x{0980}-\x{09FF}\s]+)/u', function ($matches) {
+        // Trim leading/trailing spaces inside the span
+        $banglaText = trim($matches[0]);
+        if ($banglaText === '') {
+            return $matches[0]; // if only spaces, return as is
+        }
+        return '<span class="bangla-kalpurush">' . $banglaText . '</span>';
+    }, $text);
+}
+
+
 ?>
