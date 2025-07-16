@@ -7,7 +7,7 @@
     @include('frontend.layouts.head')
 </head>
 
-<body class="js bangla-kalpurush">
+<body class="js">
 
     <!-- Preloader -->
     <div class="preloader">
