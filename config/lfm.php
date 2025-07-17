@@ -56,6 +56,7 @@ return [
                 'image/png',
                 'image/gif',
                 'image/svg+xml',
+                'image/webp',
             ],
         ],
         'image' => [
@@ -70,6 +71,7 @@ return [
                 'image/svg+xml',
                 'application/pdf',
                 'text/plain',
+                'image/webp',
             ],
         ],
     ],
@@ -123,6 +125,7 @@ return [
         'image/jpeg',
         'image/pjpeg',
         'image/png',
+        'image/webp',
     ],
 
     'thumb_img_width'          => 200, // px
