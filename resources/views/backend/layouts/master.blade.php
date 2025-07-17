@@ -36,12 +36,14 @@
                     fontNames: ['Arial', 'kalpurush', 'Times New Roman', 'Courier New'],
                     fontNamesIgnoreCheck: ['kalpurush'],
                     fontSizes: ['10', '12', '14', '16', '18', '24', '36', '48'],
+                    codeviewFilter: false, // allow all HTML
+                    codeviewIframeFilter: false, // allow iframe
                     toolbar: [
                         ['style', ['style']],
                         ['font', ['bold', 'italic', 'underline', 'clear', 'fontname', 'fontsize']],
                         ['color', ['color']],
                         ['para', ['ul', 'ol', 'paragraph']],
-                        ['insert', ['link', 'picture', 'video']],
+                        ['insert', ['link', 'picture', 'video', 'table']],
                         ['view', ['fullscreen', 'codeview', 'help']]
                     ]
                 });
