@@ -151,8 +151,8 @@
                                                 </div>
                                             </div>
                                             <div class="product-content">
-                                                <h3><a
-                                                        href="{{ route('product-detail', $product->slug) }}">{{ $product->title }}</a>
+                                                <h3><a {{-- href="{{ route('product-detail', $product->slug) }}">{{ $product->title }}</a> --}}
+                                                        href="{{ route('product-detail', $product->slug) }}">{!! highlight_bangla($product->title) !!}</a>
                                                 </h3>
                                                 <div class="product-price">
                                                     @php
@@ -617,7 +617,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script>
         /*==================================================================
-                        [ Isotope ]*/
+                                    [ Isotope ]*/
         var $topeContainer = $('.isotope-grid');
         var $filter = $('.filter-tope-group');
 
