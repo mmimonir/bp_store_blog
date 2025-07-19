@@ -16,7 +16,7 @@
                         @endphp
                         <p class="text">
                             @foreach ($settings as $data)
-                                {{ $data->short_des }}
+                                {!! $data->short_des !!}
                             @endforeach
                         </p>
                         <p class="call">Got Question? Call us 24/7<span><a href="tel:123456789">
