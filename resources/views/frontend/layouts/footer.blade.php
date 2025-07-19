@@ -14,7 +14,7 @@
                         @php
                             $settings = DB::table('settings')->get();
                         @endphp
-                        <p class="text">
+                        <p class="text" style="text-align: justify;">
                             @foreach ($settings as $data)
                                 {!! $data->short_des !!}
                             @endforeach
