@@ -8,8 +8,7 @@
                     <!-- Single Widget -->
                     <div class="single-footer about">
                         <div class="logo">
-                            <a href="index.html"><img src="{{ asset('/storage/photos/31/fav_icon.png') }}"
-                                    alt="#"></a>
+                            <a href="index.html"><img src="{{ asset('/storage/photos/31/logo.webp') }}" alt="#"></a>
                         </div>
                         @php
                             $settings = DB::table('settings')->get();
