@@ -33,7 +33,7 @@
                         <h3>Welcome To <span>Bajaj Point</span></h3>
                         <p>
                             @foreach ($settings as $data)
-                                {{ $data->description }}
+                                {!! $data->description !!}
                             @endforeach
                         </p>
                         <div class="button">
