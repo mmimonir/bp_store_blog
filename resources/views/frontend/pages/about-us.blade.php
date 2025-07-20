@@ -26,7 +26,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-12">
-                    <div class="about-content">
+                    <div class="about-content text-justify">
                         @php
                             $settings = DB::table('settings')->get();
                         @endphp
