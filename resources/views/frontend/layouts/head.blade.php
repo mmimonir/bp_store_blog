@@ -63,17 +63,18 @@
     }
 
     .social-icons a {
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        margin-right: 10px;
-        text-align: center;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        margin-right: 12px;
         border-radius: 50%;
         background-color: #f1f1f1;
         color: #333;
-        transition: 0.3s ease-in-out;
-        font-size: 18px;
+        font-size: 20px;
+        text-decoration: none;
+        transition: all 0.3s ease;
     }
 
     .social-icons a:hover {
@@ -81,19 +82,19 @@
         transform: scale(1.1);
     }
 
-    .fa-facebook:hover {
+    .social-icons a.facebook:hover {
         background-color: #3b5998;
     }
 
-    .fa-twitter:hover {
+    .social-icons a.twitter:hover {
         background-color: #1da1f2;
     }
 
-    .fa-youtube:hover {
+    .social-icons a.youtube:hover {
         background-color: #ff0000;
     }
 
-    .fa-instagram:hover {
+    .social-icons a.instagram:hover {
         background-color: #e4405f;
     }
 </style>
