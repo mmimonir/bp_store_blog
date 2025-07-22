@@ -81,7 +81,7 @@
                         </div>
                         <!-- End Single Widget -->
                         {{-- <div class="sharethis-inline-follow-buttons"></div> --}}
-                        <div class="single-footer links">
+                        <div class="single-footer links" style="margin-top: 23px;">
                             <h4>Connect with Us on Social Media</h4>
                         </div>
                         <div class="social-icons mt-3">
