@@ -62,6 +62,39 @@
         margin-left: 0px;
     }
 
-    /*
+    .social-icons a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        margin-right: 10px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: #f1f1f1;
+        color: #333;
+        transition: 0.3s ease-in-out;
+        font-size: 18px;
+    }
+
+    .social-icons a:hover {
+        color: #fff;
+        transform: scale(1.1);
+    }
+
+    .fa-facebook:hover {
+        background-color: #3b5998;
+    }
+
+    .fa-twitter:hover {
+        background-color: #1da1f2;
+    }
+
+    .fa-youtube:hover {
+        background-color: #ff0000;
+    }
+
+    .fa-instagram:hover {
+        background-color: #e4405f;
+    }
 </style>
 @stack('styles')

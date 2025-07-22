@@ -81,23 +81,15 @@
                         </div>
                         <!-- End Single Widget -->
                         {{-- <div class="sharethis-inline-follow-buttons"></div> --}}
-                        <div class="d-inline-flex gap-3">
-                            <a href="https://facebook.com/bajajpoint" target="_blank"
-                                class="text-primary text-decoration-none">
-                                <i class="fa fa-facebook fa-lg"></i>
-                            </a>
-                            <a href="https://youtube.com/@bajajpoint" target="_blank"
-                                class="text-danger text-decoration-none">
-                                <i class="fa fa-youtube fa-lg"></i>
-                            </a>
-                            <a href="https://twitter.com/bajajpoint" target="_blank"
-                                class="text-info text-decoration-none">
-                                <i class="fa fa-twitter fa-lg"></i>
-                            </a>
-                            <a href="https://instagram.com/bajajpoint" target="_blank"
-                                class="text-danger text-decoration-none">
-                                <i class="fa fa-instagram fa-lg"></i>
-                            </a>
+                        <div class="social-icons mt-3">
+                            <a href="https://facebook.com/bajajpoint" target="_blank" title="Facebook"><i
+                                    class="fa fa-facebook"></i></a>
+                            <a href="https://twitter.com/bajajpoint" target="_blank" title="Twitter"><i
+                                    class="fa fa-twitter"></i></a>
+                            <a href="https://youtube.com/@bajajpoint" target="_blank" title="YouTube"><i
+                                    class="fa fa-youtube"></i></a>
+                            <a href="https://instagram.com/bajajpoint" target="_blank" title="Instagram"><i
+                                    class="fa fa-instagram"></i></a>
                         </div>
                     </div>
                     <!-- End Single Widget -->
