@@ -62,13 +62,26 @@
         margin-left: 0px;
     }
 
+    .social-section {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .social-section h5 {
+        font-weight: bold;
+        font-size: 1.25rem;
+        margin-bottom: 15px;
+        color: #333;
+        letter-spacing: 1px;
+    }
+
     .social-icons a {
         display: inline-flex;
         align-items: center;
         justify-content: center;
         width: 45px;
         height: 45px;
-        margin-right: 12px;
+        margin: 0 10px;
         border-radius: 50%;
         background-color: #f1f1f1;
         color: #333;
