@@ -11,11 +11,31 @@
                                 $settings = DB::table('settings')->get();
 
                             @endphp
-                            <li><i class="ti-headphone-alt"></i>
+                            {{-- <li><i class="ti-headphone-alt"></i>
                                 @foreach ($settings as $data)
                                     {{ $data->phone }}
                                 @endforeach
+                            </li> --}}
+                            <li>
+                                <i class="ti-headphone-alt"></i>
+                                @foreach ($settings as $data)
+                                    <a href="tel:{{ preg_replace('/[^0-9+]/', '', $data->phone) }}">
+                                        {{ $data->phone }}
+                                    </a>
+                                @endforeach
                             </li>
+                            <li>
+                                <i class="ti-headphone-alt"></i>
+                                @foreach ($settings as $data)
+                                    <a style="color: #25D366; font-size: 24px; padding: 8px;"
+                                        href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $data->phone) }}"
+                                        target="_blank">
+                                        <i class="fa fa-whatsapp"></i>
+                                    </a>
+                                @endforeach
+                            </li>
+
+
                             <li><i class="ti-email"></i>
                                 @foreach ($settings as $data)
                                     {{ $data->email }}
