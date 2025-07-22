@@ -81,26 +81,20 @@
                         </div>
                         <!-- End Single Widget -->
                         {{-- <div class="sharethis-inline-follow-buttons"></div> --}}
-                        <div class="social-section">
-                            <h5>Our Social Links</h5>
-                            <div class="social-icons">
-                                <a href="https://facebook.com/bajajpoint" target="_blank" class="facebook"
-                                    title="Facebook">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                                <a href="https://twitter.com/bajajpoint" target="_blank" class="twitter"
-                                    title="Twitter">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                                <a href="https://youtube.com/@bajajpoint" target="_blank" class="youtube"
-                                    title="YouTube">
-                                    <i class="fa fa-youtube"></i>
-                                </a>
-                                <a href="https://instagram.com/bajajpoint" target="_blank" class="instagram"
-                                    title="Instagram">
-                                    <i class="fa fa-instagram"></i>
-                                </a>
-                            </div>
+                        <div class="social-icons mt-3">
+                            <a href="https://facebook.com/bajajpoint" target="_blank" class="facebook" title="Facebook">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="https://twitter.com/bajajpoint" target="_blank" class="twitter" title="Twitter">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="https://youtube.com/@bajajpoint" target="_blank" class="youtube" title="YouTube">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                            <a href="https://instagram.com/bajajpoint" target="_blank" class="instagram"
+                                title="Instagram">
+                                <i class="fa fa-instagram"></i>
+                            </a>
                         </div>
                     </div>
                     <!-- End Single Widget -->
