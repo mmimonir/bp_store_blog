@@ -82,7 +82,7 @@
                         <!-- End Single Widget -->
                         {{-- <div class="sharethis-inline-follow-buttons"></div> --}}
                         <div class="single-footer links" style="margin-top: 23px;">
-                            <h4>Connect with Us on Social Media</h4>
+                            <h4>Social Media</h4>
                         </div>
                         <div class="social-icons mt-3">
                             <a href="https://facebook.com/bajajpoint" target="_blank" class="facebook" title="Facebook">
