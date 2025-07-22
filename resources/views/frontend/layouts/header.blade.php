@@ -29,7 +29,7 @@
                                     <a style="color: #25D366; font-size: 24px; padding: 8px;"
                                         href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $data->phone) }}"
                                         target="_blank">
-                                        <i class="fa fa-whatsapp"></i>
+                                        <i class="fa fa-whatsapp"></i> WhatsApp
                                     </a>
                                 @endforeach
                             </li>
