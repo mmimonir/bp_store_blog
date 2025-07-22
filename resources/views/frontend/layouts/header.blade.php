@@ -26,20 +26,19 @@
                             </li>
                             <li>
                                 @foreach ($settings as $data)
-                                    <a style="color: #25D366; font-size: 24px; padding: 8px;"
+                                    <a style="color: #25D366; font-size: 16px; padding: 8px;"
                                         href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $data->phone) }}"
                                         target="_blank">
-                                        <i class="fa fa-whatsapp"></i> WhatsApp
+                                        <i class="fa fa-whatsapp" style="font-size:26px; color: #25D366;"></i>WhatsApp
                                     </a>
                                 @endforeach
                             </li>
-
-
                             <li><i class="ti-email"></i>
                                 @foreach ($settings as $data)
-                                    {{ $data->email }}
+                                    <a href="mailto:{{ $data->email }}">{{ $data->email }}</a>
                                 @endforeach
                             </li>
+
                         </ul>
                     </div>
                     <!--/ End Top Left -->
@@ -48,8 +47,11 @@
                     <!-- Top Right -->
                     <div class="right-content">
                         <ul class="list-main">
-                            <li><i class="ti-location-pin"></i> <a href="{{ route('order.track') }}">Track Order</a>
-                            </li>
+                            @if ($setting->ecommerce_enabled)
+                                <li><i class="ti-location-pin"></i> <a href="{{ route('order.track') }}">Track Order</a>
+                                </li>
+                            @endif
+
                             {{-- <li><i class="ti-alarm-clock"></i> <a href="#">Daily deal</a></li> --}}
                             @auth
                                 @if (Auth::user()->role == 'admin')
