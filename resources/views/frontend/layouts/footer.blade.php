@@ -81,6 +81,21 @@
                         </div>
                         <!-- End Single Widget -->
                         {{-- <div class="sharethis-inline-follow-buttons"></div> --}}
+                        <div class="d-inline-flex gap-3">
+                            <a href="https://facebook.com/bajajpoint" target="_blank"
+                                class="text-decoration-none text-primary">
+                                <i class="fab fa-facebook fa-lg"></i>
+                            </a>
+                            <a href="https://youtube.com/@bajajpoint" target="_blank" class="text-danger">
+                                <i class="fab fa-youtube fa-lg"></i>
+                            </a>
+                            <a href="https://twitter.com/bajajpoint" target="_blank" class="text-info">
+                                <i class="fab fa-twitter fa-lg"></i>
+                            </a>
+                            <a href="https://instagram.com/bajajpoint" target="_blank" class="text-danger">
+                                <i class="fab fa-instagram fa-lg"></i>
+                            </a>
+                        </div>
                     </div>
                     <!-- End Single Widget -->
                 </div>
