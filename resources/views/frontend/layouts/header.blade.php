@@ -25,7 +25,6 @@
                                 @endforeach
                             </li>
                             <li>
-                                <i class="ti-headphone-alt"></i>
                                 @foreach ($settings as $data)
                                     <a style="color: #25D366; font-size: 24px; padding: 8px;"
                                         href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $data->phone) }}"
