@@ -106,5 +106,13 @@
         transform: scale(1.05);
         transition: all 0.3s ease-in-out;
     }
+
+    .carousel-caption .btn-primary {
+        background-color: #006AD0;
+        border-color: #006AD0;
+        color: #fff;
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+    }
 </style>
 @stack('styles')
