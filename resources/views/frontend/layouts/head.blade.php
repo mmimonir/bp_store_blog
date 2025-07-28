@@ -117,9 +117,9 @@
         letter-spacing: 1px;
         cursor: pointer;
         box-shadow: inset 0 0 0 0 #E30613;
-        -webkit-transition: ease-out 1s;
-        -moz-transition: ease-out 1s;
-        transition: ease-out 1s;
+        -webkit-transition: ease-out 0.5s;
+        -moz-transition: ease-out 0.5s;
+        transition: ease-out 0.5s;
         text-decoration: none;
         z-index: 1;
         transform: skew(-20deg);
