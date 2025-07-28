@@ -98,7 +98,7 @@
         background-color: #e4405f;
     }
 
-    .carousel-caption:hover .btn-primary {
+    .carousel-caption .btn-primary:hover {
         /* background-color: #E30613;
         border-color: #E30613;
         color: #fff;
