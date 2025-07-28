@@ -104,7 +104,7 @@
         color: #fff;
         transform: scale(1.05);
         transition: all 0.3s ease-in-out; */
-        box-shadow: inset 108px 0 0 0 #E30613;
+        box-shadow: inset 112px 0 0 0 #E30613;
     }
 
     .carousel-caption .btn-primary {
