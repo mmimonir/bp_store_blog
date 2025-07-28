@@ -27,7 +27,7 @@ class FrontendController extends Controller
     {
         $featured = Product::where('status', 'active')->where('is_featured', 1)->orderBy('price', 'DESC')->limit(2)->get();
         $posts = Post::where('status', 'active')->orderBy('id', 'DESC')->limit(3)->get();
-        $banners = Banner::where('status', 'active')->limit(3)->orderBy('id', 'DESC')->get();
+        $banners = Banner::where('status', 'active')->limit(5)->orderBy('id', 'DESC')->get();
         // return $banner;
         $products = Product::where('status', 'active')->orderBy('id', 'DESC')->limit(8)->get();
         $category = Category::where('status', 'active')->where('is_parent', 1)->orderBy('title', 'ASC')->get();
@@ -163,21 +163,21 @@ class FrontendController extends Controller
         // return $data;
         $showURL = '';
         if (! empty($data['show'])) {
-            $showURL .= '&show='.$data['show'];
+            $showURL .= '&show=' . $data['show'];
         }
 
         $sortByURL = '';
         if (! empty($data['sortBy'])) {
-            $sortByURL .= '&sortBy='.$data['sortBy'];
+            $sortByURL .= '&sortBy=' . $data['sortBy'];
         }
 
         $catURL = '';
         if (! empty($data['category'])) {
             foreach ($data['category'] as $category) {
                 if (empty($catURL)) {
-                    $catURL .= '&category='.$category;
+                    $catURL .= '&category=' . $category;
                 } else {
-                    $catURL .= ','.$category;
+                    $catURL .= ',' . $category;
                 }
             }
         }
@@ -186,9 +186,9 @@ class FrontendController extends Controller
         if (! empty($data['brand'])) {
             foreach ($data['brand'] as $brand) {
                 if (empty($brandURL)) {
-                    $brandURL .= '&brand='.$brand;
+                    $brandURL .= '&brand=' . $brand;
                 } else {
-                    $brandURL .= ','.$brand;
+                    $brandURL .= ',' . $brand;
                 }
             }
         }
@@ -196,23 +196,23 @@ class FrontendController extends Controller
 
         $priceRangeURL = '';
         if (! empty($data['price_range'])) {
-            $priceRangeURL .= '&price='.$data['price_range'];
+            $priceRangeURL .= '&price=' . $data['price_range'];
         }
         if (request()->is('e-shop.loc/product-grids')) {
-            return redirect()->route('product-grids', $catURL.$brandURL.$priceRangeURL.$showURL.$sortByURL);
+            return redirect()->route('product-grids', $catURL . $brandURL . $priceRangeURL . $showURL . $sortByURL);
         } else {
-            return redirect()->route('product-lists', $catURL.$brandURL.$priceRangeURL.$showURL.$sortByURL);
+            return redirect()->route('product-lists', $catURL . $brandURL . $priceRangeURL . $showURL . $sortByURL);
         }
     }
 
     public function productSearch(Request $request)
     {
         $recent_products = Product::where('status', 'active')->orderBy('id', 'DESC')->limit(3)->get();
-        $products = Product::orwhere('title', 'like', '%'.$request->search.'%')
-            ->orwhere('slug', 'like', '%'.$request->search.'%')
-            ->orwhere('description', 'like', '%'.$request->search.'%')
-            ->orwhere('summary', 'like', '%'.$request->search.'%')
-            ->orwhere('price', 'like', '%'.$request->search.'%')
+        $products = Product::orwhere('title', 'like', '%' . $request->search . '%')
+            ->orwhere('slug', 'like', '%' . $request->search . '%')
+            ->orwhere('description', 'like', '%' . $request->search . '%')
+            ->orwhere('summary', 'like', '%' . $request->search . '%')
+            ->orwhere('price', 'like', '%' . $request->search . '%')
             ->orderBy('id', 'DESC')
             ->paginate('9');
 
@@ -302,11 +302,11 @@ class FrontendController extends Controller
     {
         // return $request->all();
         $rcnt_post = Post::where('status', 'active')->orderBy('id', 'DESC')->limit(3)->get();
-        $posts = Post::orwhere('title', 'like', '%'.$request->search.'%')
-            ->orwhere('quote', 'like', '%'.$request->search.'%')
-            ->orwhere('summary', 'like', '%'.$request->search.'%')
-            ->orwhere('description', 'like', '%'.$request->search.'%')
-            ->orwhere('slug', 'like', '%'.$request->search.'%')
+        $posts = Post::orwhere('title', 'like', '%' . $request->search . '%')
+            ->orwhere('quote', 'like', '%' . $request->search . '%')
+            ->orwhere('summary', 'like', '%' . $request->search . '%')
+            ->orwhere('description', 'like', '%' . $request->search . '%')
+            ->orwhere('slug', 'like', '%' . $request->search . '%')
             ->orderBy('id', 'DESC')
             ->paginate(8);
 
@@ -321,9 +321,9 @@ class FrontendController extends Controller
         if (! empty($data['category'])) {
             foreach ($data['category'] as $category) {
                 if (empty($catURL)) {
-                    $catURL .= '&category='.$category;
+                    $catURL .= '&category=' . $category;
                 } else {
-                    $catURL .= ','.$category;
+                    $catURL .= ',' . $category;
                 }
             }
         }
@@ -332,16 +332,16 @@ class FrontendController extends Controller
         if (! empty($data['tag'])) {
             foreach ($data['tag'] as $tag) {
                 if (empty($tagURL)) {
-                    $tagURL .= '&tag='.$tag;
+                    $tagURL .= '&tag=' . $tag;
                 } else {
-                    $tagURL .= ','.$tag;
+                    $tagURL .= ',' . $tag;
                 }
             }
         }
 
         // return $tagURL;
         // return $catURL;
-        return redirect()->route('blog', $catURL.$tagURL);
+        return redirect()->route('blog', $catURL . $tagURL);
     }
 
     public function blogByCategory(Request $request)
