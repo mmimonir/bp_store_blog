@@ -1174,7 +1174,7 @@ Version:1.0
     visibility: visible;
 }
 .header.sticky .header-inner .nav li a {
-    color: #333;
+    color: #fff;
 }
 .header.sticky.v3 .header-inner .nav li a {
     color: #fff;
