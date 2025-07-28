@@ -104,19 +104,19 @@
         color: #fff;
         transform: scale(1.05);
         transition: all 0.3s ease-in-out; */
-        box-shadow: inset 106px 0 0 0 #006ad0;
+        box-shadow: inset 108px 0 0 0 #E30613;
     }
 
     .carousel-caption .btn-primary {
         color: #fff;
-        border: 2px solid #006ad0;
+        border: 2px solid #E30613;
         padding: 10px 16px;
         text-align: center;
         display: inline-block;
         font-size: 14px;
         letter-spacing: 1px;
         cursor: pointer;
-        box-shadow: inset 0 0 0 0 #006ad0;
+        box-shadow: inset 0 0 0 0 #E30613;
         -webkit-transition: ease-out 1s;
         -moz-transition: ease-out 1s;
         transition: ease-out 1s;
