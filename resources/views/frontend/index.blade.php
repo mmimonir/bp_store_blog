@@ -16,10 +16,16 @@
                     <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
                         <img class="first-slide" src="{{ $banner->photo }}" alt="First slide">
                         <div class="carousel-caption d-none d-md-block text-left">
-                            <h1 class="wow fadeInDown">{{ $banner->title }}</h1>
-                            <p>{!! html_entity_decode($banner->description) !!}</p>
-                            <a class="btn btn-lg ws-btn wow fadeInUpBig" href="{{ route('product-grids') }}"
-                                role="button">Shop Now<i class="far fa-arrow-alt-circle-right"></i></i></a>
+                            {{-- <h1 class="wow fadeInDown">{{ $banner->title }}</h1> --}}
+                            {{-- <p>{!! html_entity_decode($banner->description) !!}</p> --}}
+                            {{-- <a class="btn btn-lg ws-btn wow fadeInUpBig" href="{{ route('product-grids') }}"
+                                role="button">Shop Now<i class="far fa-arrow-alt-circle-right"></i></i></a> --}}
+                            <div class="carousel-caption banner-caption d-md-block">
+                                <a href="https://www.facebook.com/PulsarBangladesh"
+                                    class="btn btn-primary btn-lg px-4 py-2 rounded-pill shadow-sm"> EXPLORE
+                                </a>
+                            </div>
+
                         </div>
                     </div>
                 @endforeach
@@ -583,7 +589,8 @@
         }
 
         #Gslider .carousel-inner {
-            height: 955px;
+            max-height: 88vh;
+            width: 100%;
         }
 
         #Gslider .carousel-inner img {
@@ -592,7 +599,7 @@
         }
 
         #Gslider .carousel-inner .carousel-caption {
-            bottom: 60%;
+            bottom: 12%;
         }
 
         #Gslider .carousel-inner .carousel-caption h1 {
@@ -618,7 +625,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script>
         /*==================================================================
-                                                [ Isotope ]*/
+                                                                                    [ Isotope ]*/
         var $topeContainer = $('.isotope-grid');
         var $filter = $('.filter-tope-group');
 

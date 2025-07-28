@@ -97,5 +97,14 @@
     .social-icons a.instagram:hover {
         background-color: #e4405f;
     }
+
+    .carousel-caption:hover .btn-primary {
+        background-color: #004080;
+        /* darker blue on hover */
+        border-color: #003366;
+        color: #fff;
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+    }
 </style>
 @stack('styles')
