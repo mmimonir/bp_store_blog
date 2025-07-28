@@ -108,11 +108,31 @@
     }
 
     .carousel-caption .btn-primary {
+        transform: skew(-20deg);
         background-color: #006AD0;
         border-color: #006AD0;
         color: #fff;
         transform: scale(1.05);
         transition: all 0.3s ease-in-out;
     }
+
+    /* .banner-caption a {
+        color: #fff;
+        border: 2px solid #006ad0;
+        padding: 10px 16px;
+        text-align: center;
+        display: inline-block;
+        font-size: 14px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        box-shadow: inset 0 0 0 0 #006ad0;
+        -webkit-transition: ease-out 1s;
+        -moz-transition: ease-out 1s;
+        transition: ease-out 1s;
+        text-decoration: none;
+        z-index: 1;
+        transform: skew(-20deg);
+        position: relative;
+    } */
 </style>
 @stack('styles')
