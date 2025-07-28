@@ -99,12 +99,12 @@
     }
 
     .carousel-caption:hover .btn-primary {
-        background-color: #E30613;
-        /* darker blue on hover */
+        /* background-color: #E30613;
         border-color: #E30613;
         color: #fff;
         transform: scale(1.05);
-        transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; */
+        box-shadow: inset 106px 0 0 0 #006ad0;
     }
 
     .carousel-caption .btn-primary {
