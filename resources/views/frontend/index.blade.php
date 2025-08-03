@@ -90,7 +90,7 @@
                     <!-- Slide 1 -->
                     <div class="carousel-item active">
                         <div class="row">
-                            <div class="col-md-4 mb-4">
+                            <div class="col-md-6 mb-4">
                                 <div class="card h-100 shadow-sm">
                                     <img class="card-img-top"
                                         src="https://cdn.bajajauto.com/en-bd/-/media/globalbajajauto/common-media/features/pulsar/n250/pulsar_n250.webp"
@@ -102,7 +102,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 mb-4">
+                            <div class="col-md-6 mb-4">
                                 <div class="card h-100 shadow-sm">
                                     <img class="card-img-top"
                                         src="https://cdn.bajajauto.com/en-bd/-/media/globalbajajauto/common-media/features/pulsar/n160/pulsar_n160_dual_abs_price_in_bangladesh-1.webp"
@@ -114,25 +114,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card h-100 shadow-sm">
-                                    <img class="card-img-top"
-                                        src="https://cdn.bajajauto.com/en-bd/-/media/globalbajajauto/common-media/features/platina/110/platina110h.webp"
-                                        alt="Platina 110 H">
-                                    <div class="card-body text-center">
-                                        <h5 class="card-title">Platina 110 H</h5>
-                                        <a href="/en-bd/bikes/platina-110-h"
-                                            class="btn btn-outline-primary btn-sm">Explore</a>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
                     <!-- Slide 2 -->
                     <div class="carousel-item">
                         <div class="row">
-                            <div class="col-md-4 mb-4">
+                            <div class="col-md-6 mb-4">
                                 <div class="card h-100 shadow-sm">
                                     <img class="card-img-top"
                                         src="https://cdn.bajajauto.com/en-bd/-/media/globalbajajauto/common-media/features/discover/discover-125/discover125disc_green_new_model.webp"
@@ -144,7 +132,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 mb-4">
+                            <div class="col-md-6 mb-4">
                                 <div class="card h-100 shadow-sm">
                                     <img class="card-img-top"
                                         src="https://cdn.bajajauto.com/en-bd/-/media/globalbajajauto/common-media/product-detail-page-banners/ct/100.webp"
@@ -157,31 +145,13 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
-                <!-- Carousel Controls -->
-                {{-- <a class="carousel-control-prev" href="#featuredCarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a class="carousel-control-next" href="#featuredCarousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </a> --}}
-                {{-- <a class="carousel-control-prev" href="#featuredCarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#featuredCarousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a> --}}
                 <a class="carousel-control-prev" href="#featuredCarousel" role="button" data-slide="prev">
                     <i class="fa fa-chevron-left"></i>
                 </a>
                 <a class="carousel-control-next" href="#featuredCarousel" role="button" data-slide="next">
                     <i class="fa fa-chevron-right"></i>
                 </a>
-
             </div>
         </div>
     </section>
@@ -733,39 +703,33 @@
         }
 
         /* .carousel-item-next,
-                .carousel-item-left.active {
-                    transform: translateX(100%);
-                }
+                                                    .carousel-item-left.active {
+                                                        transform: translateX(100%);
+                                                    }
 
-                .carousel-item-prev,
-                .carousel-item-right.active {
-                    transform: translateX(-100%);
-                } */
+                                                    .carousel-item-prev,
+                                                    .carousel-item-right.active {
+                                                        transform: translateX(-100%);
+                                                    } */
         .carousel-control-prev,
         .carousel-control-next {
             width: auto;
             top: 50%;
             transform: translateY(-50%);
-            opacity: 1;
         }
 
         .carousel-control-prev {
             left: 15px;
-            /* adjust distance from left */
         }
 
         .carousel-control-next {
             right: 15px;
-            /* adjust distance from right */
         }
 
-        /* Font Awesome arrow size and color */
         .carousel-control-prev i,
         .carousel-control-next i {
-            color: red;
-            /* your custom color */
+            color: #000;
             font-size: 2rem;
-            /* increase size */
         }
 
         /* Optional hover effect */
@@ -780,7 +744,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script>
         /*==================================================================
-                                                                                                                                                    [ Isotope ]*/
+                                                                                                                                                                                        [ Isotope ]*/
         var $topeContainer = $('.isotope-grid');
         var $filter = $('.filter-tope-group');
 
