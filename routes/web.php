@@ -32,8 +32,18 @@ use UniSharp\LaravelFilemanager\Lfm;
 
 
 // Redirect register routes to login or abort
-Route::match(['get', 'post'], 'register', function () {
-    return redirect('/login'); // or abort(404);
+
+Route::prefix('user')->group(function () {
+    Route::match(['get', 'post'], 'register', function () {
+        // Option 1: Redirect to login page
+        return redirect()->route('login');
+
+        // Option 2: Return 403 Forbidden
+        // abort(403, 'Registration is disabled.');
+
+        // Option 3: Show 404
+        // abort(404);
+    });
 });
 
 
