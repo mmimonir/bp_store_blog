@@ -31,13 +31,6 @@ use UniSharp\LaravelFilemanager\Lfm;
 */
 
 
-// Redirect register routes to login or abort
-
-Route::match(['get', 'post'], 'user/register', function () {
-    return redirect()->route('login.form');
-});
-
-
 // CACHE CLEAR ROUTE
 Route::get('cache-clear', function () {
     Artisan::call('optimize:clear');
@@ -57,6 +50,10 @@ Route::get('user/logout', [FrontendController::class, 'logout'])->name('user.log
 
 Route::get('user/register', [FrontendController::class, 'register'])->name('register.form');
 Route::post('user/register', [FrontendController::class, 'registerSubmit'])->name('register.submit');
+
+Route::match(['get', 'post'], 'user/register', function () {
+    return redirect()->route('login.form');
+});
 
 // Reset password
 Route::get('password/reset', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
