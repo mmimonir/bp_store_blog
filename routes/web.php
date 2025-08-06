@@ -30,6 +30,13 @@ use UniSharp\LaravelFilemanager\Lfm;
 |
 */
 
+
+// Redirect register routes to login or abort
+Route::match(['get', 'post'], 'register', function () {
+    return redirect('/login'); // or abort(404);
+});
+
+
 // CACHE CLEAR ROUTE
 Route::get('cache-clear', function () {
     Artisan::call('optimize:clear');
@@ -208,4 +215,4 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
     Lfm::routes();
 });
 
-Route::auth(['register' => false]);
+// Route::auth(['register' => false]);
