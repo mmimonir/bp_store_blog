@@ -58,7 +58,7 @@ Route::get('cache-clear', function () {
 // STORAGE LINKED ROUTE
 Route::get('storage-link', [AdminController::class, 'storageLink'])->name('storage.link');
 
-Auth::routes(['register' => false]);
+// Auth::routes(['register' => false]);
 
 Route::get('user/login', [FrontendController::class, 'login'])->name('login.form');
 Route::post('user/login', [FrontendController::class, 'loginSubmit'])->name('login.submit');
