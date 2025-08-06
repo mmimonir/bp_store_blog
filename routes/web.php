@@ -36,7 +36,7 @@ use UniSharp\LaravelFilemanager\Lfm;
 Route::prefix('user')->group(function () {
     Route::match(['get', 'post'], 'register', function () {
         // Option 1: Redirect to login page
-        return redirect()->route('login');
+        return redirect()->route('user/login');
 
         // Option 2: Return 403 Forbidden
         // abort(403, 'Registration is disabled.');
