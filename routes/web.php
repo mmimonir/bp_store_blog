@@ -33,17 +33,8 @@ use UniSharp\LaravelFilemanager\Lfm;
 
 // Redirect register routes to login or abort
 
-Route::prefix('user')->group(function () {
-    Route::match(['get', 'post'], 'register', function () {
-        // Option 1: Redirect to login page
-        return redirect()->route('user/login');
-
-        // Option 2: Return 403 Forbidden
-        // abort(403, 'Registration is disabled.');
-
-        // Option 3: Show 404
-        // abort(404);
-    });
+Route::match(['get', 'post'], 'user/register', function () {
+    return redirect()->route('login.form');
 });
 
 
@@ -64,8 +55,8 @@ Route::get('user/login', [FrontendController::class, 'login'])->name('login.form
 Route::post('user/login', [FrontendController::class, 'loginSubmit'])->name('login.submit');
 Route::get('user/logout', [FrontendController::class, 'logout'])->name('user.logout');
 
-// Route::get('user/register', [FrontendController::class, 'register'])->name('register.form');
-// Route::post('user/register', [FrontendController::class, 'registerSubmit'])->name('register.submit');
+Route::get('user/register', [FrontendController::class, 'register'])->name('register.form');
+Route::post('user/register', [FrontendController::class, 'registerSubmit'])->name('register.submit');
 
 // Reset password
 Route::get('password/reset', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
