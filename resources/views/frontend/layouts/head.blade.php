@@ -8,7 +8,6 @@
 <link
     href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
     rel="stylesheet">
-
 <!-- StyleSheet -->
 <link rel="manifest" href="/manifest.json">
 <!-- Bootstrap -->
@@ -98,13 +97,57 @@
         background-color: #e4405f;
     }
 
-    .carousel-caption:hover .btn-primary {
-        background-color: #004080;
-        /* darker blue on hover */
-        border-color: #003366;
+    .carousel-caption .btn-primary:hover {
+        /* background-color: #E30613;
+        border-color: #E30613;
         color: #fff;
         transform: scale(1.05);
-        transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; */
+        box-shadow: inset 114px 0 0 0 #E30613;
     }
+
+    .carousel-caption .btn-primary {
+        color: #fff;
+        border: 2px solid #E30613;
+        padding: 10px 16px;
+        text-align: center;
+        display: inline-block;
+        font-size: 14px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        box-shadow: inset 0 0 0 0 #E30613;
+        -webkit-transition: ease-out 0.5s;
+        -moz-transition: ease-out 0.5s;
+        transition: ease-out 0.5s;
+        text-decoration: none;
+        z-index: 1;
+        transform: skew(-20deg);
+        position: relative;
+        /* transform: skew(-20deg);
+        background-color: #006AD0;
+        border-color: #006AD0;
+        color: #fff;
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out; */
+    }
+
+    /* .banner-caption a {
+        color: #fff;
+        border: 2px solid #006ad0;
+        padding: 10px 16px;
+        text-align: center;
+        display: inline-block;
+        font-size: 14px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        box-shadow: inset 0 0 0 0 #006ad0;
+        -webkit-transition: ease-out 1s;
+        -moz-transition: ease-out 1s;
+        transition: ease-out 1s;
+        text-decoration: none;
+        z-index: 1;
+        transform: skew(-20deg);
+        position: relative;
+    } */
 </style>
 @stack('styles')

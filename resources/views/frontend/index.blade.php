@@ -44,7 +44,7 @@
     <!--/ End Slider Area -->
 
     <!-- Start Small Banner  -->
-    <section class="small-banner section">
+    {{-- <section class="small-banner section">
         <div class="container-fluid">
             <div class="row">
                 @php
@@ -73,8 +73,91 @@
                 @endif
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- End Small Banner -->
+
+    <!-- Start Feature Product Area -->
+    <section class="py-5 bg-light">
+        <div class="container-fluid">
+            <div class="text-center mb-4">
+                <hr class="w-25 mx-auto mb-3">
+                <h2 class="font-weight-bold">Featured Products</h2>
+            </div>
+
+            <div id="featuredCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner">
+
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100 shadow-sm">
+                                    <img class="card-img-top"
+                                        src="https://cdn.bajajauto.com/en-bd/-/media/globalbajajauto/common-media/features/pulsar/n250/pulsar_n250.webp"
+                                        alt="Pulsar N250">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Pulsar N250</h5>
+                                        <a href="/en-bd/bikes/pulsar-n250"
+                                            class="btn btn-outline-primary btn-sm">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100 shadow-sm">
+                                    <img class="card-img-top"
+                                        src="https://cdn.bajajauto.com/en-bd/-/media/globalbajajauto/common-media/features/pulsar/n160/pulsar_n160_dual_abs_price_in_bangladesh-1.webp"
+                                        alt="Pulsar N160">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Pulsar N160</h5>
+                                        <a href="/en-bd/bikes/pulsar-n160"
+                                            class="btn btn-outline-primary btn-sm">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100 shadow-sm">
+                                    <img class="card-img-top"
+                                        src="https://cdn.bajajauto.com/en-bd/-/media/globalbajajauto/common-media/features/discover/discover-125/discover125disc_green_new_model.webp"
+                                        alt="Discover 125 Disc">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Discover 125 Disc</h5>
+                                        <a href="/en-bd/bikes/discover-125-disc"
+                                            class="btn btn-outline-primary btn-sm">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100 shadow-sm">
+                                    <img class="card-img-top"
+                                        src="https://cdn.bajajauto.com/en-bd/-/media/globalbajajauto/common-media/product-detail-page-banners/ct/100.webp"
+                                        alt="CT 100 ES">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">CT 100 ES</h5>
+                                        <a href="/en-bd/bikes/ct-100-es" class="btn btn-outline-primary btn-sm">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#featuredCarousel" role="button" data-slide="prev">
+                    <i class="fa fa-chevron-left"></i>
+                </a>
+                <a class="carousel-control-next" href="#featuredCarousel" role="button" data-slide="next">
+                    <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- End Feature Product Area -->
 
     <!-- Start Product Area -->
     <div class="product-area section">
@@ -618,6 +701,42 @@
         #Gslider .carousel-indicators {
             bottom: 70px;
         }
+
+        /* .carousel-item-next,
+                                                    .carousel-item-left.active {
+                                                        transform: translateX(100%);
+                                                    }
+
+                                                    .carousel-item-prev,
+                                                    .carousel-item-right.active {
+                                                        transform: translateX(-100%);
+                                                    } */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: auto;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .carousel-control-prev {
+            left: 15px;
+        }
+
+        .carousel-control-next {
+            right: 15px;
+        }
+
+        .carousel-control-prev i,
+        .carousel-control-next i {
+            color: #000;
+            font-size: 2rem;
+        }
+
+        /* Optional hover effect */
+        .carousel-control-prev:hover i,
+        .carousel-control-next:hover i {
+            color: black;
+        }
     </style>
 @endpush
 
@@ -625,7 +744,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script>
         /*==================================================================
-                                                                                    [ Isotope ]*/
+                                                                                                                                                                                        [ Isotope ]*/
         var $topeContainer = $('.isotope-grid');
         var $filter = $('.filter-tope-group');
 

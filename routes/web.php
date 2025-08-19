@@ -30,6 +30,7 @@ use UniSharp\LaravelFilemanager\Lfm;
 |
 */
 
+
 // CACHE CLEAR ROUTE
 Route::get('cache-clear', function () {
     Artisan::call('optimize:clear');
@@ -41,7 +42,7 @@ Route::get('cache-clear', function () {
 // STORAGE LINKED ROUTE
 Route::get('storage-link', [AdminController::class, 'storageLink'])->name('storage.link');
 
-Auth::routes(['register' => false]);
+// Auth::routes(['register' => false]);
 
 Route::get('user/login', [FrontendController::class, 'login'])->name('login.form');
 Route::post('user/login', [FrontendController::class, 'loginSubmit'])->name('login.submit');
@@ -49,6 +50,10 @@ Route::get('user/logout', [FrontendController::class, 'logout'])->name('user.log
 
 Route::get('user/register', [FrontendController::class, 'register'])->name('register.form');
 Route::post('user/register', [FrontendController::class, 'registerSubmit'])->name('register.submit');
+
+Route::match(['get', 'post'], 'user/register', function () {
+    return redirect()->route('login.form');
+});
 
 // Reset password
 Route::get('password/reset', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
@@ -202,9 +207,10 @@ Route::group(['prefix' => '/user', 'middleware' => ['user']], function () {
     // Password Change
     Route::get('change-password', [HomeController::class, 'changePassword'])->name('user.change.password.form');
     Route::post('change-password', [HomeController::class, 'changPasswordStore'])->name('change.password');
-
 });
 
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     Lfm::routes();
 });
+
+// Route::auth(['register' => false]);
