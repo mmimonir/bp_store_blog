@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Helpers;
+
 use App\Models\Cart;
 use App\Models\Category;
 use App\Models\Message;
@@ -34,34 +36,34 @@ class Helper
         $menu = $category->getAllParentWithChild();
 
         if ($menu) {
-            ?>
+?>
 
             <li>
                 <a href="javascript:void(0);">Category<i class="ti-angle-down"></i></a>
                 <ul class="dropdown border-0 shadow">
                     <?php
-                                foreach ($menu as $cat_info) {
-                                    if ($cat_info->child_cat->count() > 0) {
-                                        ?>
+                    foreach ($menu as $cat_info) {
+                        if ($cat_info->child_cat->count() > 0) {
+                    ?>
                             <li><a href="<?php echo route('product-cat', $cat_info->slug); ?>"><?php echo $cat_info->title; ?></a>
                                 <ul class="dropdown sub-dropdown border-0 shadow">
                                     <?php
-                                                        foreach ($cat_info->child_cat as $sub_menu) {
-                                                            ?>
+                                    foreach ($cat_info->child_cat as $sub_menu) {
+                                    ?>
                                         <li><a href="<?php echo route('product-sub-cat', [$cat_info->slug, $sub_menu->slug]); ?>"><?php echo $sub_menu->title; ?></a></li>
                                     <?php
-                                                        }
-                                        ?>
+                                    }
+                                    ?>
                                 </ul>
                             </li>
                         <?php
-                                    } else {
-                                        ?>
+                        } else {
+                        ?>
                             <li><a href="<?php echo route('product-cat', $cat_info->slug); ?>"><?php echo $cat_info->title; ?></a></li>
                     <?php
-                                    }
-                                }
-            ?>
+                        }
+                    }
+                    ?>
                 </ul>
             </li>
 <?php
@@ -232,7 +234,7 @@ if (! function_exists('generateUniqueSlug')) {
         $count = $modelClass::where('slug', $slug)->count();
 
         if ($count > 0) {
-            $slug = $slug.'-'.date('ymdis').'-'.rand(0, 999);
+            $slug = $slug . '-' . date('ymdis') . '-' . rand(0, 999);
         }
 
         return $slug;
@@ -250,7 +252,7 @@ if (! function_exists('highlight_bangla')) {
                 return $matches[0]; // if only spaces, return as is
             }
 
-            return '<span class="bangla-kalpurush">'.$banglaText.'</span>';
+            return '<span class="bangla-kalpurush">' . $banglaText . '</span>';
         }, $text);
     }
 }

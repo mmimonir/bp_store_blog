@@ -1,48 +1,47 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
-use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Auth\ResetPasswordController;
-use App\Http\Controllers\CartController;
-use App\Http\Controllers\CouponController;
 use App\Http\Controllers\FrontendController;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\MessageController;
-use App\Http\Controllers\NotificationController;
-use App\Http\Controllers\OrderController;
-use App\Http\Controllers\PayPalController;
-use App\Http\Controllers\PostCommentController;
-use App\Http\Controllers\ProductReviewController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\WishlistController;
-use Illuminate\Support\Facades\Artisan;
-use Illuminate\Support\Facades\Route;
-use UniSharp\LaravelFilemanager\Lfm;
-
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ProductReviewController;
+use App\Http\Controllers\PostCommentController;
+use App\Http\Controllers\CouponController;
+use App\Http\Controllers\PayPalController;
+use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\HomeController;
+use \UniSharp\LaravelFilemanager\Lfm;
+use App\Http\Controllers\Auth\ResetPasswordController;
 /*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
+    |--------------------------------------------------------------------------
+    | Web Routes
+    |--------------------------------------------------------------------------
+    |
+    | Here is where you can register web routes for your application. These
+    | routes are loaded by the RouteServiceProvider within a group which
+    | contains the "web" middleware group. Now create something great!
+    |
+    */
 
 // CACHE CLEAR ROUTE
 Route::get('cache-clear', function () {
     Artisan::call('optimize:clear');
     request()->session()->flash('success', 'Successfully cache cleared.');
-
     return redirect()->back();
 })->name('cache.clear');
+
 
 // STORAGE LINKED ROUTE
 Route::get('storage-link', [AdminController::class, 'storageLink'])->name('storage.link');
 
-// Auth::routes(['register' => false]);
+
+Auth::routes(['register' => false]);
 
 Route::get('user/login', [FrontendController::class, 'login'])->name('login.form');
 Route::post('user/login', [FrontendController::class, 'loginSubmit'])->name('login.submit');
@@ -50,10 +49,6 @@ Route::get('user/logout', [FrontendController::class, 'logout'])->name('user.log
 
 Route::get('user/register', [FrontendController::class, 'register'])->name('register.form');
 Route::post('user/register', [FrontendController::class, 'registerSubmit'])->name('register.submit');
-
-Route::match(['get', 'post'], 'user/register', function () {
-    return redirect()->route('login.form');
-});
 
 // Reset password
 Route::get('password/reset', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
@@ -131,6 +126,7 @@ Route::get('payment', [PayPalController::class, 'payment'])->name('payment');
 Route::get('cancel', [PayPalController::class, 'cancel'])->name('payment.cancel');
 Route::get('payment/success', [PayPalController::class, 'success'])->name('payment.success');
 
+
 // Backend section start
 
 Route::group(['prefix' => '/admin', 'middleware' => ['auth', 'admin']], function () {
@@ -182,6 +178,7 @@ Route::group(['prefix' => '/admin', 'middleware' => ['auth', 'admin']], function
     Route::post('change-password', [AdminController::class, 'changPasswordStore'])->name('change.password');
 });
 
+
 // User section start
 Route::group(['prefix' => '/user', 'middleware' => ['user']], function () {
     Route::get('/', [HomeController::class, 'index'])->name('user');
@@ -189,8 +186,8 @@ Route::group(['prefix' => '/user', 'middleware' => ['user']], function () {
     Route::get('/profile', [HomeController::class, 'profile'])->name('user-profile');
     Route::post('/profile/{id}', [HomeController::class, 'profileUpdate'])->name('user-profile-update');
     //  Order
-    Route::get('/order', 'HomeController@orderIndex')->name('user.order.index');
-    Route::get('/order/show/{id}', 'HomeController@orderShow')->name('user.order.show');
+    Route::get('/order', "HomeController@orderIndex")->name('user.order.index');
+    Route::get('/order/show/{id}', "HomeController@orderShow")->name('user.order.show');
     Route::delete('/order/delete/{id}', [HomeController::class, 'userOrderDelete'])->name('user.order.delete');
     // Product Review
     Route::get('/user-review', [HomeController::class, 'productReviewIndex'])->name('user.productreview.index');
@@ -212,5 +209,3 @@ Route::group(['prefix' => '/user', 'middleware' => ['user']], function () {
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     Lfm::routes();
 });
-
-// Route::auth(['register' => false]);

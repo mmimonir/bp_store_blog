@@ -38,10 +38,7 @@
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
             "Touhidurabir\\Filterable\\": "packages/laravel-filterable/src/"
-        },
-        "files": [
-            "app/Http/Helper.php"
-        ]
+        }
     },
     "autoload-dev": {
         "psr-4": {
