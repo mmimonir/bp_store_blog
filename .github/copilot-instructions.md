@@ -8,7 +8,11 @@ The Laravel Boost guidelines are specifically curated by Laravel maintainers for
 ## Foundational Context
 This application is a Laravel application and its main Laravel ecosystems package & versions are below. You are an expert with them all. Ensure you abide by these specific packages & versions.
 
+<<<<<<< HEAD
 - php - 8.3.23
+=======
+- php - 8.3.24
+>>>>>>> 45635f597f5a88f735c1e9a8c6a6b6086d31e5b1
 - laravel/framework (LARAVEL) - v10
 - laravel/prompts (PROMPTS) - v0
 - laravel/pint (PINT) - v1

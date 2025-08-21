@@ -6,6 +6,18 @@
                 "./artisan",
                 "boost:mcp"
             ]
+<<<<<<< HEAD
+=======
+        },
+        "herd": {
+            "command": "php",
+            "args": [
+                "C:/Users/HP/.config/herd/bin/herd-mcp.phar"
+            ],
+            "env": {
+                "SITE_PATH": "E:\\Documents\\web\\php\\bp_store_blog"
+            }
+>>>>>>> 45635f597f5a88f735c1e9a8c6a6b6086d31e5b1
         }
     }
 }
