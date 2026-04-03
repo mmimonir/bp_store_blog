@@ -37,7 +37,7 @@ class PostCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        // return $request->all();
+        // return $request->all();        
         $this->validate($request, [
             'title' => 'string|required',
             'status' => 'required|in:active,inactive',
