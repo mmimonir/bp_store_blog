@@ -441,16 +441,16 @@
                             <div class="product-gallery">
                                 <div class="quickview-slider-active">
                                     <div class="single-slider">
-                                        <img src="images/modal1.png" alt="#">
+                                        <img src="{{ asset('images/modal1.png') }}" alt="#">
                                     </div>
                                     <div class="single-slider">
-                                        <img src="images/modal2.png" alt="#">
+                                        <img src="{{ asset('images/modal2.png') }}" alt="#">
                                     </div>
                                     <div class="single-slider">
-                                        <img src="images/modal3.png" alt="#">
+                                        <img src="{{ asset('images/modal3.png') }}" alt="#">
                                     </div>
                                     <div class="single-slider">
-                                        <img src="images/modal4.png" alt="#">
+                                        <img src="{{ asset('images/modal4.png') }}" alt="#">
                                     </div>
                                 </div>
                             </div>
