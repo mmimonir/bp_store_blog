@@ -303,7 +303,8 @@
 																			}
 																		@endphp --}}
                                                             <h4>{{ ceil($product_detail->getReview->avg('rate')) }}
-                                                                <span>(Overall)</span></h4>
+                                                                <span>(Overall)</span>
+                                                            </h4>
                                                             <span>Based on {{ $product_detail->getReview->count() }}
                                                                 Comments</span>
                                                         </div>
